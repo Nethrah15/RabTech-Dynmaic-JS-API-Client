@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RABTECH Task 5 - Shop App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🛍️ RABTECH Shop</h1>
+    <input type="text" id="searchInput" placeholder="Search products...">
+    <button onclick="toggleCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+  </header>
+
+  <!-- Category Tabs -->
+  <div id="categoryTabs">
+    <button onclick="setCategory('all')" class="active">All</button>
+    <button onclick="setCategory(`men's clothing`)">Men</button>
+    <button onclick="setCategory(`women's clothing`)">Women</button>
+    <button onclick="setCategory('jewelery')">Jewelery</button>
+    <button onclick="setCategory('electronics')">Electronics</button>
+  </div>
+
+  <!-- Sort -->
+  <select id="sortSelect" onchange="applyFilters()">
+    <option value="default">Sort: Default</option>
+    <option value="low">Price: Low to High</option>
+    <option value="high">Price: High to Low</option>
+    <option value="az">Name: A-Z</option>
+  </select>
+
+  <!-- Loading / Error -->
+  <div id="loading">Loading products...</div>
+  <div id="error" style="display:none;"></div>
+  <div id="skeleton" style="display:none;">⏳ Loading skeleton...</div>
+
+  <!-- Products Grid -->
+  <main id="productGrid"></main>
+
+  <!-- Cart Box -->
+  <div id="cartBox" style="display:none;">
+    <h2>Your Cart</h2>
+    <ul id="cartList"></ul>
+    <button onclick="clearCart()">Clear Cart</button>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
