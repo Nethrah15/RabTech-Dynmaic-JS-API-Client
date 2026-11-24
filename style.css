@@ -1,0 +1,8 @@
+body { font-family: Arial; background: #f0f2f5; margin: 0; }
+header { display: flex; justify-content: space-between; padding: 16px; background: white; flex-wrap: wrap; gap: 10px; }
+#categoryTabs { display: flex; gap: 8px; padding: 12px; flex-wrap: wrap; }
+#categoryTabs button.active { background: #0077b5; color: white; }
+#productGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; padding: 16px; }
+.card { background: white; padding: 16px; border-radius: 12px; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+.card img { height: 120px; object-fit: contain; }
+button, select, input { padding: 8px 12px; border-radius: 8px; border: 1px solid #ddd; cursor: pointer; }
